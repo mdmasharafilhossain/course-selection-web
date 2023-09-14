@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "cover": "https://example.com/item1.jpg",
+      "title": "Introduction to C Programming",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "price": 15000,
+      "credit": 1
+    },
+    {
+      "id": 2,
+      "cover": "https://example.com/item2.jpg",
+      "title": "Introduction to Algorithms",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+      "price": 29.99,
+      "credit": 75
+    },
+    {
+      "id": 3,
+      "cover": "https://example.com/item3.jpg",
+      "title": "Product 3",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+      "price": 39.99,
+      "credit": 50
+    },
+    {
+      "id": 4,
+      "cover": "https://example.com/item4.jpg",
+      "title": "Product 4",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+      "price": 24.99,
+      "credit": 120
+    },
+    {
+      "id": 5,
+      "cover": "https://example.com/item5.jpg",
+      "title": "Product 5",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+      "price": 14.99,
+      "credit": 90
+    },
+    {
+      "id": 6,
+      "cover": "https://example.com/item6.jpg",
+      "title": "Product 6",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+      "price": 49.99,
+      "credit": 60
+    },
+    {
+      "id": 7,
+      "cover": "https://example.com/item7.jpg",
+      "title": "Product 7",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+      "price": 34.99,
+      "credit": 80
+    },
+    {
+      "id": 8,
+      "cover": "https://example.com/item8.jpg",
+      "title": "Product 8",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+      "price": 19.99,
+      "credit": 110
+    },
+    {
+      "id": 9,
+      "cover": "https://example.com/item9.jpg",
+      "title": "Product 9",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+      "price": 44.99,
+      "credit": 70
+    }
+  ]
+  
