@@ -3,6 +3,8 @@ import dolar from '../../assets/dollar-sign 1.png';
 import frame from '../../assets/Frame.png';
 import { useState } from 'react';
 import Cart from '../Cart/cart';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Home = () => {
     const [allCourse , setAllCourse] = useState([]);
      const [SelectedCourse,setSelectedCourse] = useState([]);
@@ -22,14 +24,21 @@ const SelectButton = (course) =>{
     let cost = course.price;
 
     if(isClicked){
-         return    alert("already seleted the course");
+         return    toast.warning("Already Seleted the course!",{
+            autoClose :2000,
+            position :'top-center'
+            
+         });
     } else{
         SelectedCourse.forEach((item) =>{
             credit = credit +item.credit;
         });
         
         if(credit > 20){
-           return alert('fuck you');
+           return toast.error('Maximum Credit limit over!',{
+            autoClose :2000,
+            position :'top-center'
+           });
         }
         else{
             setCredit(credit);
@@ -87,6 +96,7 @@ console.log(SelectedCourse)
                       </div>
                       <div className="card-actions justify-end">
                         <button onClick={()=>SelectButton(course)} className="btn btn-primary w-full mt-7 mb-4 bg-[#2F80ED] border-none hover:bg-blue-600 text-wh">Select</button>
+                        <ToastContainer />
                       </div>
                     </div>
                   </div>
