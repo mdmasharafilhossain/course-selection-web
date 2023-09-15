@@ -13,6 +13,9 @@ const Home = () => {
     },[])
    console.log(allCourse);
 
+const SelectButton = (course) =>{
+console.log(course)
+}
 
 
 
@@ -53,7 +56,7 @@ const Home = () => {
                   
                       </div>
                       <div className="card-actions justify-end">
-                        <button className="btn btn-primary w-full mt-7 mb-4 bg-[#2F80ED] border-none">Select</button>
+                        <button onClick={()=>SelectButton(course)} className="btn btn-primary w-full mt-7 mb-4 bg-[#2F80ED] border-none">Select</button>
                       </div>
                     </div>
                   </div>
