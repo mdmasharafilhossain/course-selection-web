@@ -6,6 +6,9 @@ import Cart from '../Cart/cart';
 const Home = () => {
     const [allCourse , setAllCourse] = useState([]);
      const [SelectedCourse,setSelectedCourse] = useState([]);
+     const[credit,setCredit] =useState(0);
+     const[cost ,setCost] = useState(0);
+     const[remain,setRemain] =useState(20)
     useEffect(() => {
     fetch('card.json')
     .then(res =>res.json())
@@ -14,7 +17,33 @@ const Home = () => {
 //    console.log(allCourse);
 
 const SelectButton = (course) =>{
-    setSelectedCourse([...SelectedCourse,course])
+    const isClicked =SelectedCourse.find((item)=>item.id == course.id);
+    let credit = course.credit;
+    let cost = course.price;
+
+    if(isClicked){
+         return    alert("already seleted the course");
+    } else{
+        SelectedCourse.forEach((item) =>{
+            credit = credit +item.credit;
+        });
+        // setCredit(credit);
+        if(credit > 20){
+           return alert('fuck you');
+        }
+        else{
+            setCredit(credit);
+        }
+        const TotalRemain = 20 - credit;
+        setRemain(TotalRemain);
+        SelectedCourse.forEach((item) =>{
+            cost = cost +item.price;
+        });
+        setCost(cost);
+        setSelectedCourse([...SelectedCourse,course]);
+    }
+
+    setSelectedCourse([...SelectedCourse,course]);
 }
 
 console.log(SelectedCourse)
@@ -66,9 +95,9 @@ console.log(SelectedCourse)
 
               </div>
                {/* This is for cart */}
-               <div className='mt-12 ml-10 '>
+               <div className='mt-14 ml-10 '>
 
-                <Cart SelectedCourse={SelectedCourse}></Cart>
+                <Cart SelectedCourse={SelectedCourse} credit={credit} cost={cost} remain={remain}></Cart>
                </div>
 
             </div>
