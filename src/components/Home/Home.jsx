@@ -27,7 +27,7 @@ const SelectButton = (course) =>{
         SelectedCourse.forEach((item) =>{
             credit = credit +item.credit;
         });
-        // setCredit(credit);
+        
         if(credit > 20){
            return alert('fuck you');
         }
