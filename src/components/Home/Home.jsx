@@ -59,7 +59,7 @@ console.log(SelectedCourse)
 
 
     return (
-        <div className="px-20 bg-[#F3F3F3]">
+        <div className="px-20 bg-[#F3F3F3] ">
             <h1 className="text-4xl font-bold text-center pt-20">Course Registration</h1>
             {/* This is main div  */}
 
@@ -67,7 +67,7 @@ console.log(SelectedCourse)
 
             {/* This is for 9 cards div */}
             
-              <div className="grid grid-cols-3 gap-10 ml-20 mt-20"> 
+              <div className="grid grid-cols-3 gap-10 ml-20 mt-20 pb-24"> 
 
                {
                 allCourse.map((course) =>(
